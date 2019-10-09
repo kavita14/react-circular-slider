@@ -18,10 +18,15 @@ Then just renders it
 
 | _Prop_ |     _Description_     | _Default value_ |
 | ------ | :-------------------: | :-------------: |
-| color  | Sets background color |      blue       |
-| width  |      Sets width       |       100       |
-| height |      Sets height      |       100       |
-| text   |    Sets inner text    |  empty string   |
+| circleColor  | Sets background color |      black       |
+| knobColor  |      Sets knob color       |       blue       |
+| radius |      Sets circle radius      |       100       |
+| halfCircle   |    Sets if circle is half or not    |  false   |
+| min   |    Sets min value    |  0   |
+| max   |    Sets max value    |  100   |
+| stepSize   |    Sets step size    |  1   |
+| value   |    Sets initial value   |  0   |
+| onChange   |    callback function on value change   |  null   |
 
 ### Example
 
@@ -32,7 +37,7 @@ import ReactCircularSlider from "react-circular-slider";
 class App extends Component {
   render() {
     return (
-        <ReactCircularSlider height={150} color="red" text="Hello World!" />
+        <ReactCircularSlider size={500} circleColor="black" value={10} stepSize={2} />
     );
   }
 }
